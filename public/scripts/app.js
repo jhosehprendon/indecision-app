@@ -57,18 +57,15 @@ var render = function render() {
             'Remove All'
         ),
         React.createElement(
-            'ul',
+            'ol',
             null,
-            React.createElement(
-                'li',
-                null,
-                'Buy food'
-            ),
-            React.createElement(
-                'li',
-                null,
-                'Buy food'
-            )
+            app.options.map(function (option) {
+                return React.createElement(
+                    'li',
+                    { key: option },
+                    option
+                );
+            })
         ),
         React.createElement(
             'form',
